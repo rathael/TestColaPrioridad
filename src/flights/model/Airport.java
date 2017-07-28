@@ -1,7 +1,7 @@
 package flights.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Airports of the world
@@ -15,7 +15,7 @@ public class Airport {
 	
 	private String name;
 	
-	private List<Airport> flightsTo = new ArrayList<Airport>();
+	private Map<Airport, Flight> flightsTo = new HashMap<>();
 	
 	public Airport(String id, String name) {
 		super();
@@ -39,11 +39,13 @@ public class Airport {
 		this.name = name;
 	}
 
-	public List<Airport> getFlightsTo() {
+	public Map<Airport, Flight> getFlightsTo() {
 		return flightsTo;
 	}
 
-	public void setFlightsTo(List<Airport> flightsTo) {
+	public void setFlightsTo(Map<Airport, Flight> flightsTo) {
 		this.flightsTo = flightsTo;
 	}
+
+
 }

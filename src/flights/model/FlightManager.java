@@ -32,10 +32,10 @@ public class FlightManager {
 		// Create direct connections
 		for (Flight flight : flights) {
 			// go
-			airports.get(flight.getOrigin().getId()).getFlightsTo().add(flight.getDestination());
+			airports.get(flight.getOrigin().getId()).getFlightsTo().put(flight.getDestination(), flight);
 			
 			// return
-			airports.get(flight.getDestination().getId()).getFlightsTo().add(flight.getOrigin());
+			airports.get(flight.getDestination().getId()).getFlightsTo().put(flight.getOrigin(), flight);
 		}
 	}
 	
@@ -55,6 +55,14 @@ public class FlightManager {
 			u = q.pollFirst();
 			
 			//if (u.dist)
+			for (Map.Entry<Airport, Flight> connection : u.getFlightsTo().entrySet() ){
+				v = connection.getKey();
+				
+				long alternateCost = connection.getValue().getCost();
+				
+				
+				
+			}
 		}
 	}
 }
