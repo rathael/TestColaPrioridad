@@ -1,9 +1,12 @@
-package flights.model;
+package flights.manager;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.NavigableSet;
 import java.util.TreeSet;
+
+import flights.model.Airport;
+import flights.model.Flight;
 
 /**
  * Graph of Flights
