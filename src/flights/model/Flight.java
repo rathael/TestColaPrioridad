@@ -9,34 +9,18 @@ package flights.model;
 public class Flight {
 	private String id;
 	
-	private Airport origin;
+	private String originAirportCode;
 
-	private Airport destination;
+	private String destinationAirportCode;
 	
 	private Long cost;
 
-	public Flight(String id, Airport origin, Airport destination, Long cost) {
+	public Flight(String id, String originAirportCode, String destinationAirportCode, Long cost) {
 		super();
 		this.id = id;
-		this.origin = origin;
-		this.destination = destination;
+		this.originAirportCode = originAirportCode;
+		this.destinationAirportCode = destinationAirportCode;
 		this.cost = cost;
-	}
-
-	public Airport getOrigin() {
-		return origin;
-	}
-
-	public void setOrigin(Airport origin) {
-		this.origin = origin;
-	}
-
-	public Airport getDestination() {
-		return destination;
-	}
-
-	public void setDestination(Airport destination) {
-		this.destination = destination;
 	}
 
 	public Long getCost() {
@@ -53,5 +37,21 @@ public class Flight {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public String getOriginAirportCode() {
+		return originAirportCode;
+	}
+
+	public void setOriginAirportCode(String originAirportCode) {
+		this.originAirportCode = originAirportCode;
+	}
+
+	public String getDestinationAirportCode() {
+		return destinationAirportCode;
+	}
+
+	public void setDestinationAirportCode(String destinationAirportCode) {
+		this.destinationAirportCode = destinationAirportCode;
 	}
 }
