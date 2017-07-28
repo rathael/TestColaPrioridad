@@ -1,5 +1,8 @@
 package flights.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Airports of the world
  * 
@@ -11,6 +14,8 @@ public class Airport {
 	private String id;
 	
 	private String name;
+	
+	private List<Airport> flightsTo = new ArrayList<Airport>();
 	
 	public Airport(String id, String name) {
 		super();
@@ -32,5 +37,13 @@ public class Airport {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public List<Airport> getFlightsTo() {
+		return flightsTo;
+	}
+
+	public void setFlightsTo(List<Airport> flightsTo) {
+		this.flightsTo = flightsTo;
 	}
 }
