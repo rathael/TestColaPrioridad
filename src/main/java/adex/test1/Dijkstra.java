@@ -16,7 +16,9 @@ public class Dijkstra {
 			new Graph.Edge("c", "d", 11), 
 			new Graph.Edge("c", "f", 2), 
 			new Graph.Edge("d", "e", 6),
-			new Graph.Edge("e", "f", 9)};
+			new Graph.Edge("e", "f", 9),
+			new Graph.Edge("a", "h", 18),
+			new Graph.Edge("h", "e", 2)};
 	
 	private static final String START = "a";
 	private static final String END = "e";
@@ -126,8 +128,8 @@ class Graph {
 
 		// set-up vertices
 		for (Vertex v : graph.values()) {
-			v.previous = v == source ? source : null;
-			v.dist = v == source ? 0 : Integer.MAX_VALUE;
+			v.previous = (v == source ? source : null);
+			v.dist = (v == source ? 0 : Integer.MAX_VALUE);
 			q.add(v);
 		}
 
